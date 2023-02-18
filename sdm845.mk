@@ -211,9 +211,7 @@ PRODUCT_PACKAGES += \
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
-    android.hidl.base@1.0_system \
     android.hidl.manager@1.0 \
-    android.hidl.manager@1.0_system \
     android.hidl.allocator@1.0 \
     android.hidl.allocator@1.0.vendor \
     libhidltransport \
@@ -454,12 +452,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     hostapd \
-    libqsap_sdk \
-    libQWiFiSoftApCfg \
     libwifi-hal-qcom \
     libwpa_client \
     wificond \
-    wifilogd \
     wpa_cli \
     WifiOverlay \
     wpa_supplicant \
