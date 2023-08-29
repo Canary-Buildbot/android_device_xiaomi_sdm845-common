@@ -31,6 +31,8 @@ def IncrementalOTA_InstallEnd(info):
 
 def OTA_UpdateFirmware(info):
   info.script.AppendExtra('ui_print("Flashing firmware images");')
+  info.script.AppendExtra('package_extract_dir("install", "/tmp/install");')
+  info.script.AppendExtra('set_metadata_recursive("/tmp/install", "uid", 0, "gid", 0, "dmode", 0755, "fmode", 0644);')
   info.script.AppendExtra('package_extract_file("install/firmware-update/abl.elf", "/dev/block/bootdevice/by-name/abl_a");')
   info.script.AppendExtra('package_extract_file("install/firmware-update/abl.elf", "/dev/block/bootdevice/by-name/abl_b");')
   info.script.AppendExtra('package_extract_file("install/firmware-update/cmnlib64.img", "/dev/block/bootdevice/by-name/cmnlib64_a");')
